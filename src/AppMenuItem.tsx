@@ -16,7 +16,7 @@ import IconExpandMore from '@material-ui/icons/ExpandMore'
 import AppMenuItemComponent from './AppMenuItemComponent'
 
 // React runtime PropTypes
-export const AppMenuItemPropTypes = {
+export type AppMenuItemPropTypes = {
     name: PropTypes.string.isRequired,
     link: PropTypes.string,
     Icon: PropTypes.elementType,

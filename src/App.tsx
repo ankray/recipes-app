@@ -32,12 +32,7 @@ const App: React.FC = () => {
           <main className={classes.content}>
             <Container maxWidth="lg" className={classes.container}>
 
-              <Switch>
-                <Route path="/" exact component={PageDashboard} />
-                <Route path="/recipes" component={PageRecipes} />
-                <Route path="/customers" component={PageCustomers} />
-                <Route path="/reports" component={PageReports} />
-              </Switch>
+              <MainRoute></MainRoute>
 
             </Container>
           </main>
