@@ -9,7 +9,9 @@ import IconPeople from '@material-ui/icons/People'
 import IconBarChart from '@material-ui/icons/BarChart'
 import IconLibraryBooks from '@material-ui/icons/LibraryBooks'
 
-import AppMenuItem from './AppMenuItem'
+import './Menu.scss';
+
+import AppMenuItem from '../../AppMenuItem'
 
 const appMenuItems = [
     {
@@ -54,15 +56,16 @@ const appMenuItems = [
     },
 ]
 
-const AppMenu: React.FC = () => {
+const Menu: React.FC = () => {
     const classes = useStyles()
 
     return (
-        <List component="nav" className={classes.appMenu} disablePadding>
+        <List component="nav" className="menu" disablePadding>
             {/* <AppMenuItem {...appMenuItems[0]} /> */}
             {appMenuItems.map((item, index) => (
-                <AppMenuItem {...item} key={index}/>
+                <AppMenuItem class="menu__item" {...item} key={index}/>
             ))}
+            <AppMenuItem class="menu__item menu_item-disabled" {...item} key={index}/>
         </List>
     )
 }
@@ -86,4 +89,4 @@ const useStyles = makeStyles(theme =>
     }),
 )
 
-export default AppMenu
+export default Menu

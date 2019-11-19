@@ -7,7 +7,7 @@ import Drawer from '@material-ui/core/Drawer'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 
-import AppMenu from './AppMenu'
+import Menu from './components/menu/Menu'
 
 const PageDashboard = () => <Typography variant="h3" component="h1">Dashboard Page</Typography>
 const PageRecipes = () => <Typography variant="h3" component="h1">Recipes Page</Typography>
@@ -27,7 +27,7 @@ const App: React.FC = () => {
                 paper: classes.drawerPaper,
               }}
           >
-            <AppMenu />
+            <Menu />
           </Drawer>
           <main className={classes.content}>
             <Container maxWidth="lg" className={classes.container}>
